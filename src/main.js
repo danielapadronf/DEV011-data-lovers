@@ -1,7 +1,6 @@
-import { cargarImagenes } from './dataFunctions.js';
+import data from './data/got/got.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    cargarImagenes();
-});
+
+
 
 

@@ -1,0 +1,42 @@
+/*Controla visibilidad de elementos en HTML*/
+.pagina {
+    display: none;
+}
+
+.pagina-activa {
+    display: block;
+}
+body {
+    background: linear-gradient(rgba(5, 7, 12, 0.90), rgba(5, 7, 12, 0.90)),
+    url(Img/Img\ inicio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+h1 {
+    color: #EFB810;
+    font-size: 5em;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-size: 2em;
+    text-align: center; 
+    position: absolute;
+    top: 50%;
+}
+h3 {
+    color: white;
+    text-align: center; 
+    position: absolute;
+    top: 70%;
+}
+footer{
+    color: white;
+    text-align: center; 
+    position: absolute;
+    top: 90%; 
+}
+p {
+    color: white
+}
