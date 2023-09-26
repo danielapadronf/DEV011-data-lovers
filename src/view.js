@@ -7,13 +7,18 @@ const contenedorPersonajes = document.querySelector('#root');
 
 const monstrarCartasPersonajes = (list) => {
   const ul = document.createElement('ul');
+  ul.classList.add('contenedor');
   list.forEach((personaje) => {
     const li = document.createElement('li');
     li.innerHTML = `
-      <div class="personaje-img">
-        <img src="${personaje.imageUrl}">
-        <p class="personaje-nombre">${personaje.firstName}</p>
-      </div>`;
+      <dl itemscope itemtype="got"> 
+        <div class="carta">
+          <img class="imagen-cartaA" src="${personaje.imageUrl}">
+          <dt>Name:</dt>  
+          <dd class="nombre-cartaA" itemprop="fullName">${personaje.fullName}</dd>
+        
+        </div>
+      </dl>`;
     ul.appendChild(li);
   });
 

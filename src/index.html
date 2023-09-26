@@ -9,27 +9,34 @@
 </head>
 
 <body>
-  <div>
     <header>
-      <h1>GAME OF THRONES</h1>
+      <h1><img src=".\Img\Letras-doradas.png" alt="letras doradas game of thrones"/></h1>
     </header>
-    <nav>
-      <button onclick="mostrarPagina('pagina1')">Inicio</button>
-      <button onclick="mostrarPagina('pagina2')">Personajes</button>
-    </nav>
-  </div>
+    <div class="contenedor-barra-principal">
+      <nav class="barra-navegacion">
+        <button class="boton" onclick="mostrarPagina('pagina1')">Inicio</button>
+        <button class="boton" onclick="mostrarPagina('pagina2')">Personajes</button>
+        <button class="boton" onclick="mostrarPagina('pagina2')">Orden</button>
+      </nav>
   <!-- Contenido de la página 1 -->
-  <div id="pagina1" class="pagina pagina-activa">
-    <main>
-      <h2> “Una reina que no confía en nadie es tan tonta como una reina que confía en todo el mundo”.</h2>
-      <h3>(Daenerys Targaryen)</h3>
-    </main>
-    <footer>Jessica Clemente y Daniela Padron<br>@DataLovers</footer>
-  </div>
+    <section id="pagina1" class="pagina pagina-activa">
+      <main>
+        <h2> “Una reina que no confía en nadie es tan tonta como una reina que confía en todo el mundo”.</h2>
+        <h3>(Daenerys Targaryen)</h3>
+      </main>
+      <footer>Jessica Clemente y Daniela Padron<br>@DataLovers</footer>
+      </section>  
   <!-- Contenido de la página 2 -->
-  <div id="pagina2" class="pagina">
-    <section id="root"></section>
-  </div>
+    <div id="pagina2" class="pagina">
+      <section id="root"></section>
+      <select data-testid="select-filter" name="type">
+        <option value="familia">Familia</option>
+      </select>
+      <select testid="select-sort" name="nombre">
+      <option value="asc">A-Z</option></select>
+      <section id="root"></section>
+    </div>
+  </div> 
   <script type="module" src="view.js"></script>
   <script type="module" src="main.js"></script>
   <script src="dataFunctions.js"></script>
