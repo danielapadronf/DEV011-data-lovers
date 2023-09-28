@@ -9,29 +9,40 @@
 body {
     background: linear-gradient(rgba(5, 7, 12, 0.90), rgba(5, 7, 12, 0.90)),
     url(Img/Img\ inicio.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    
 }  
+main{
+    padding-left: 9rem;
+}
+h1{
+    display: grid;
+    place-items: center; 
+    height: 50vh;;
+}
 h2 {
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     display: flex;
     text-align: center; 
-    position: absolute;
-    top: 50%;
-}
-h3 {
+    position: sticky;
     color: white;
     text-align: center; 
     position: absolute;
     top: 70%;
 }
+h3 {
+    color: white;
+    text-align: center; 
+    position: absolute;
+    top: 100%;
+}
 footer{
     color: white;
     text-align: center; 
     position: absolute;
-    top: 90%; 
+    bottom: 0;
+
+    
 }
 p {
     color: white
@@ -43,22 +54,39 @@ p {
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
-    
+    padding-left: 10rem;
 }
-.carta{
-    text-align: center;
+.carta{ 
     height: 230px;
     max-width: 200px;
-    background-color: rgba(126, 120, 120, 0.8); /* Color de fondo de la tarjeta con transparencia */
+    background-color: rgba(126, 120, 120, 0.485); /* Color de fondo de la tarjeta con transparencia */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(142, 139, 139, 0.2); /* Sombra */
     overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
-    color: #eef6ff;  
+    color: #eef6ff;
+    backface-visibility: hidden;
+}
+
+.imagen-cartaA:hover{
+    width: 100%; 
+    height: 70%; 
+    border-radius: 3px;
+    object-fit: cover;
+    object-position: center; /* Centra la imagen */
+    object-fit: cover;
+    transform: perspective(500px) rotateY(0deg); 
+}
+.familia-cartaB:hover{
+    background : rgba(126, 120, 120, 0.485);
+    transform: perspective(500px) rotateY(180deg);
 }
 .carta img{
-    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
-    height: 70%; /* Mantiene la proporción de la imagen */
-}
+    width: 100%; 
+    height: 70%; 
+    border-radius: 3px;
+    object-fit: cover;
+    object-position: center; /* Centra la imagen */
+    }
 .carta:hover{
     box-shadow:5px 5px 20px rgb(rgb(94, 91, 91), rgb(15, 15, 15), rgb(212, 212, 218));
     background-color: #161616;
@@ -66,37 +94,41 @@ p {
     transition: 1s all;
 }
 
-.nombre-cartaA{
-    font-style: italic;
+.nombre-carta{
+    margin: 0;
+    justify-content: center;
+    font-style: arial;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 5px;
     color: #FFFFFF; 
 }
 .boton {
     padding: 5px 10px; /* Ajusta el espacio alrededor del texto */
     font-size: 16px; /* Ajusta el tamaño de la fuente */
-    background-color: #777a7c; /* Color de fondo */
-    color: #000000; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 5px; /* Borde redondeado */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     margin: 5px;
     margin-bottom: 10px;
+    background: none;
+    border: 0;
 }
 .boton:hover {
-    background-color: #eef6ff; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    background-color: #ffffff; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    color: #000000; /* Color del texto */
 }
 .barra-navegacion {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: content-box;
     max-width: 470px;
-    padding: 2rem 1rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #777a7c;
-    
+    background-color: #777a7c63;
+    height: 100%;
 }
 .contenedor-barra-principal{
     display: flex;
