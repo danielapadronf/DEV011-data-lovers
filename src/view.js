@@ -2,10 +2,10 @@ import data from './data/got/got.js';
 // estas funciones son de ejemplo
 //const personajes = document.getElementById('Personajes')
 
-const listaPersonajes = data.got;
-const contenedorPersonajes = document.querySelector('#root');
+//const listaPersonajes = data.got;
+//const contenedorPersonajes = document.querySelector('#root');
 
-const monstrarCartasPersonajes = (list) => {
+export function mostrarCartasPersonajes(list) {
   const ul = document.createElement('ul');
   ul.classList.add('contenedor');
   list.forEach((personaje) => {
@@ -13,15 +13,15 @@ const monstrarCartasPersonajes = (list) => {
     li.innerHTML = `
       <dl itemscope itemtype="got"> 
         <div class="carta">
-          <img class="imagen-cartaA" src="${personaje.imageUrl}">
-          <dt>Name:</dt>  
-          <dd class="nombre-cartaA" itemprop="fullName">${personaje.fullName}</dd>
+          <img class="imagen-cartaA" src="${personaje.imageUrl}">  
+          <dd class="nombre-carta" itemprop="fullName">${personaje.fullName}</dd>
+        <div class="carta">
+          <dd class="familia-cartaB" itemprop="family">${personaje.family}</dd>
+
         
         </div>
       </dl>`;
-    ul.appendChild(li);
-  });
-
-  contenedorPersonajes.appendChild(ul);
-};
-monstrarCartasPersonajes(listaPersonajes);
+      ul.appendChild(li);
+    });
+    return ul;
+  };
