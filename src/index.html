@@ -12,8 +12,8 @@
       <h1><img src="./Img/Letras-doradas.png" alt="letras doradas game of thrones"/></h1>
       <div class="contenedor-barra-principal">
         <nav class="barra-navegacion">
-          <button class="boton" onclick="mostrarPagina('pagina1')">Inicio</button>
-          <button class="boton" onclick="mostrarPagina('pagina2')">Personajes</button>
+          <button id="boton-inicio" class="boton">Inicio</button>
+          <button id="boton-personajes" class="boton">Personajes</button>
         </nav>
       </div>
     </header>
@@ -28,22 +28,44 @@
   <!-- Contenido de la página 2 -->
     <div id="pagina2" class="pagina">
       <form action="">
-        <label for="select-filter">Filtrar Familia</label>
-        <select id="select-filter" data-testid="select-filter" name="type">
-          <option value="familia">Familia</option>
+        <select id="select-filter" data-testid="select-filter" name="Familia">
+          <option value="Stark">Stark</option>
+          <option value="Worm">Worm</option>
+          <option value="Tyrell">Tyrell</option>
+          <option value="Qyburn">Qyburn</option>
+          <option value="Targaryen">Targaryen</option>
+          <option value="Tarly">Tarly</option>
+          <option value="Baratheon">Baratheon</option>
+          <option value="Lannister">Lannister</option>
+          <option value="Greyjoy">Greyjoy</option>
+          <option value="Clegane">Clegane</option>
+          <option value="Baelish">Baelish</option>
+          <option value="Seaworth">Seaworth</option>
+          <option value="Unknown">Unknown</option>
+          <option value="Free Folk">Free Folk</option>
+          <option value="Tarth">Tarth</option>
+          <option value="Naathi">Naathi</option>
+          <option value="None">None</option>
+          <option value="Bolton">Bolton</option>
+          <option value="Naharis">Naharis</option>
+          <option value="Mormont">Mormont</option>
+          <option value="Sparrow">Sparrow</option>
+          <option value="Viper">Viper</option>
+          <option value="Sand">Sand</option>
+          <option value="Greyjoy">Greyjoy</option>
+          <option value="Worm">Worm</option>    
         </select>
-        <label for="select-sort">Ordenar</label>
-        <select id="select-sort" data-testid="select-sort" name="nombre">
-          <option value="asc">A - Z</option>
-          <option value="desc">Z - A</option>
-        </select>
+<select id="sort-order" name="sort-order">
+  <option value="asc">A-Z</option>
+  <option value="desc">Z-A</option>
+</select>
         <button data-testid="button-clear">Limpiar</button>
       </form>
       <section id="root"></section>
     </div>
   <script type="module" src="view.js"></script>
   <script type="module" src="main.js"></script>
-  <script src="dataFunctions.js"></script>
+  <script type="module" src="dataFunctions.js"></script>
 </body>
 
 </html>

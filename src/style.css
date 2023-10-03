@@ -54,46 +54,13 @@ p {
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
-    padding-left: 10rem;
-}
-.carta{ 
-    height: 230px;
-    max-width: 200px;
-    background-color: rgba(126, 120, 120, 0.485); /* Color de fondo de la tarjeta con transparencia */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(142, 139, 139, 0.2); /* Sombra */
-    overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
-    color: #eef6ff;
-    backface-visibility: hidden;
+    padding-left: 10rem; 
 }
 
-.imagen-cartaA:hover{
-    width: 100%; 
-    height: 70%; 
-    border-radius: 3px;
-    object-fit: cover;
-    object-position: center; /* Centra la imagen */
-    object-fit: cover;
-    transform: perspective(500px) rotateY(0deg); 
-}
 .familia-cartaB:hover{
     background : rgba(126, 120, 120, 0.485);
-    transform: perspective(500px) rotateY(180deg);
+    transform: perspective(500px) rotateY(360deg);
 }
-.carta img{
-    width: 100%; 
-    height: 70%; 
-    border-radius: 3px;
-    object-fit: cover;
-    object-position: center; /* Centra la imagen */
-    }
-.carta:hover{
-    box-shadow:5px 5px 20px rgb(rgb(94, 91, 91), rgb(15, 15, 15), rgb(212, 212, 218));
-    background-color: #161616;
-    transform: scale(1.2);
-    transition: 1s all;
-}
-
 .nombre-carta{
     margin: 0;
     justify-content: center;
@@ -137,3 +104,62 @@ p {
 #pagina2{
 margin-top: -20px;
 }
+.card {
+    background-color: transparent;
+    width: 200px; /* Ancho deseado */
+    height: 200px; /* Altura deseada */
+    perspective: 1000px;
+    object-fit: cover;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    object-fit: cover;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.imagen-cartaA {
+    width: 100%;
+    height: 100%;
+    position: relative ;
+    object-position: 50% 0;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    background-color: #444;
+    color: rgba(112, 108, 108, 0.479);
+}
+
+.card-back {
+    background-color: #444;
+    color: rgba(112, 108, 108, 0.479);
+    transform: rotateY(180deg);
+}
+.contenedor-con-degradado {
+    height: 230px;
+    max-width: 200px;
+    background-color: rgba(126, 120, 120, 0.485); /* Color de fondo de la tarjeta con transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(142, 139, 139, 0.2); /* Sombra */
+    overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
+    color: #eef6ff;
+    backface-visibility: hidden;
+}
+
+
+
