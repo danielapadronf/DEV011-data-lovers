@@ -28,20 +28,22 @@
   <!-- Contenido de la página 2 -->
     <div id="pagina2" class="pagina">
       <form action="">
-        <select id="select-filter" data-testid="select-filter" name="Familia">
-          <option value="Stark">Stark</option>
+        <label for="select-filter">Filtrar Casa</label>
+        <select id="select-filter" data-testid="select-filter" name="family">
+          <option value="">Familias</option>
+          <option value="House Stark">Stark</option>
           <option value="Worm">Worm</option>
-          <option value="Tyrell">Tyrell</option>
+          <option value="House Tyrell">Tyrell</option>
           <option value="Qyburn">Qyburn</option>
-          <option value="Targaryen">Targaryen</option>
-          <option value="Tarly">Tarly</option>
-          <option value="Baratheon">Baratheon</option>
-          <option value="Lannister">Lannister</option>
-          <option value="Greyjoy">Greyjoy</option>
-          <option value="Clegane">Clegane</option>
-          <option value="Baelish">Baelish</option>
-          <option value="Seaworth">Seaworth</option>
-          <option value="Unknown">Unknown</option>
+          <option value="House Targaryen">Targaryen</option>
+          <option value="House Tarly">Tarly</option>
+          <option value="House Baratheon">Baratheon</option>
+          <option value="House Lannister">Lannister</option>
+          <option value="House Greyjoy">Greyjoy</option>
+          <option value="House Clegane">Clegane</option>
+          <option value="House Baelish">Baelish</option>
+          <option value="House Seaworth">Seaworth</option>
+          <option value="Unkown">Unknown</option>
           <option value="Free Folk">Free Folk</option>
           <option value="Tarth">Tarth</option>
           <option value="Naathi">Naathi</option>
@@ -53,13 +55,14 @@
           <option value="Viper">Viper</option>
           <option value="Sand">Sand</option>
           <option value="Greyjoy">Greyjoy</option>
-          <option value="Worm">Worm</option>    
+          <option value=""></option>
+          <option value="Lorathi">Lorathi</option>  
         </select>
-<select id="sort-order" name="sort-order">
+  <select id="sort-order" data-testid="select-sort" name="abc">
   <option value="asc">A-Z</option>
   <option value="desc">Z-A</option>
 </select>
-        <button data-testid="button-clear">Limpiar</button>
+<button id="button-clear" type="button" data-testid="button-clear">Limpiar</button>
       </form>
       <section id="root"></section>
     </div>

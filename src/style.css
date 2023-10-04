@@ -161,5 +161,18 @@ margin-top: -20px;
     backface-visibility: hidden;
 }
 
+#select-filter,
+#sort-order,
+[data-testid="button-clear"] {
+    color: white;
+    font-size: 18px;
+    background-color: rgba(26, 27, 27, 0.636);
+    padding: 0.5rem 1.5rem;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(91, 94, 94);
+    left: 600px;
+}
 
 
