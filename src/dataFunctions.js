@@ -35,6 +35,15 @@ export const sortFamilia = (value) => {
   }
 
   return familia; // Devuelve la lista ordenada
-};
-
+}
+// Función para filtrar la lista de personajes
+export const filterBy = ((data, filterBy, value) =>{
+  console.log(data)
+  const arrayFamily = data.filter(family => {
+    if (family [filterBy] === value){
+      return family;
+    }
+  })
+  return arrayFamily
+});
 
