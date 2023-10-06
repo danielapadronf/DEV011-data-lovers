@@ -3,8 +3,8 @@ export const renderItems = (data) => {
   ul.classList.add('contenedor');
   data.forEach((personaje) => {
     const li = document.createElement('li');
-li.innerHTML = `
-      <div class="contenedor-con-degradado">
+    li.classList.add("contenedor-con-degradado")
+    li.innerHTML = `
         <div class="card" itemprop="character">
           <div class="card-inner">
             <div class="card-front">
@@ -24,7 +24,6 @@ li.innerHTML = `
             </div>
           </div>
         </div>
-      </div>
     `;
 
     ul.appendChild(li);

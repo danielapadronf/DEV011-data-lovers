@@ -9,10 +9,14 @@
 body {
     background: linear-gradient(rgba(5, 7, 12, 0.90), rgba(5, 7, 12, 0.90)),
     url(Img/Img\ inicio.jpg);
-    
+    box-sizing: border-box;
 }  
 main{
     padding-left: 9rem;
+}
+header{
+    display: block;
+
 }
 h1{
     display: grid;
@@ -41,17 +45,14 @@ footer{
     text-align: center; 
     position: absolute;
     bottom: 0;
-
-    
+    width: 100%; 
 }
 p {
     color: white
 }
-
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
     padding-left: 10rem; 
@@ -69,9 +70,9 @@ p {
     align-items: center;
     color: #FFFFFF; 
 }
-.boton {
+.boton-inicio {
     padding: 5px 10px; /* Ajusta el espacio alrededor del texto */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
     color: #ffffff; /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 5px; /* Borde redondeado */
@@ -81,7 +82,23 @@ p {
     background: none;
     border: 0;
 }
-.boton:hover {
+.botonPersonajes{
+    padding: 5px 10px; /* Ajusta el espacio alrededor del texto */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 5px;
+    margin-bottom: 10px;
+    background: none;
+    border: 0;
+}
+.botonPersonajes:hover {
+    background-color: #ffffff; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    color: #000000; /* Color del texto */
+}
+.boton-inicio:hover {
     background-color: #ffffff; /* Cambia el color de fondo al pasar el ratón sobre el botón */
     color: #000000; /* Color del texto */
 }
@@ -94,15 +111,22 @@ p {
     left: 0;
     box-sizing: content-box;
     max-width: 470px;
-    background-color: #777a7c63;
+    background: rgb(31,29,29);
+    background: linear-gradient(90deg, rgba(31, 29, 29, 0.43) 0%, rgba(16, 17, 17, 0.359) 21%, rgba(45, 44, 46, 0.299) 100%);
     height: 100%;
 }
 .contenedor-barra-principal{
-    display: flex;
-    
+    display: inline-flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    overflow: hidden;
+    gap: 1rem;
 }
 #pagina2{
-margin-top: -20px;
+margin-top: -5px;
 }
 .card {
     background-color: transparent;
@@ -147,8 +171,9 @@ margin-top: -20px;
 
 .card-back {
     background-color: #444;
-    color: rgba(112, 108, 108, 0.479);
+    color: rgb(255, 242, 242);
     transform: rotateY(180deg);
+    font-size: 18px;
 }
 .contenedor-con-degradado {
     height: 230px;
@@ -172,7 +197,9 @@ margin-top: -20px;
     border-width: 2px;
     border-style: solid;
     border-color: rgb(91, 94, 94);
-    left: 600px;
+    left: 800px;
 }
-
-
+label{
+    color: white;
+    font-size: 18px;
+}

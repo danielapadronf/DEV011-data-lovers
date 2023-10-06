@@ -12,8 +12,8 @@
       <h1><img src="./Img/Letras-doradas.png" alt="letras doradas game of thrones"/></h1>
       <div class="contenedor-barra-principal">
         <nav class="barra-navegacion">
-          <button id="boton-inicio" class="boton">Inicio</button>
-          <button id="boton-personajes" class="boton">Personajes</button>
+          <button class="boton-inicio" class="boton-inicio">Inicio</button>
+          <button class="botonPersonajes">Personajes</button>
         </nav>
       </div>
     </header>
@@ -27,10 +27,9 @@
       </div>   
   <!-- Contenido de la página 2 -->
     <div id="pagina2" class="pagina">
-      <form action="">
-        <label for="select-filter">Filtrar Casa</label>
+      <div class="contenedor-barra-principal">
+      <label for="select-filter">Filtrar Casa:</label>
         <select id="select-filter" data-testid="select-filter" name="family">
-          <option value="">Familias</option>
           <option value="House Stark">Stark</option>
           <option value="Worm">Worm</option>
           <option value="House Tyrell">Tyrell</option>
@@ -55,14 +54,16 @@
           <option value="Viper">Viper</option>
           <option value="Sand">Sand</option>
           <option value="Greyjoy">Greyjoy</option>
-          <option value=""></option>
           <option value="Lorathi">Lorathi</option>  
         </select>
+        <label for="sort-order">Ordenar:</label>
   <select id="sort-order" data-testid="select-sort" name="abc">
   <option value="asc">A-Z</option>
   <option value="desc">Z-A</option>
 </select>
-<button id="button-clear" type="button" data-testid="button-clear">Limpiar</button>
+<form action="">
+  <button class="button-clear" type="button" data-testid="button-clear">Limpiar</button>
+</form>
       </form>
       <section id="root"></section>
     </div>

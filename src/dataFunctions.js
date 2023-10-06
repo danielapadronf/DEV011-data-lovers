@@ -1,21 +1,5 @@
 import data from './data/got/got.js';
 
-const personajes = document.getElementById('personajes');
-
-// export const cargarImagenes = () => {
-//   console.log('La funcion se ejecuta')
-//     const images = data.got.map((item) => {
-//         const img = document.createElement('img'); 
-//         img.src = item.imageUrl;
-//         img.alt = item.fullName;
-//         img.width = 100;
-//         img.height = 100;
-//         return img;
-//     });
-
-//     images.forEach((image) => personajes.appendChild(image));
-// };
-
 export const mostrarPagina = (pagina) => {
   const paginas = document.querySelectorAll('.pagina');
   paginas.forEach(p => p.classList.remove('pagina-activa'));
@@ -38,7 +22,6 @@ export const sortFamilia = (value) => {
 }
 // Función para filtrar la lista de personajes
 export const filterBy = ((data, filterBy, value) =>{
-  console.log(data)
   const arrayFamily = data.filter(family => {
     if (family [filterBy] === value){
       return family;
@@ -47,3 +30,16 @@ export const filterBy = ((data, filterBy, value) =>{
   return arrayFamily
 });
 
+const getAgeAverage = () => {
+  const allTheBornDate = data.got.reduce((prev, current) => (
+    prev + current && current?.born?.replace(/[^0-9]/g, '') || 0
+  ), 0)
+
+  const totalOfCharts = data.got.length
+
+  const average = allTheBornDate / totalOfCharts
+
+  console.log("el average es: ", average, "del total de personas: ", average)
+}
+
+getAgeAverage()
