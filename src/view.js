@@ -5,7 +5,7 @@ export const renderItems = (data) => {
     const li = document.createElement('li');
     li.classList.add("contenedor-con-degradado")
     li.innerHTML = `
-        <div class="card" itemprop="character">
+        <div class="card" itemType="http://schema.org/Person" itemprop="character">
           <div class="card-inner">
             <div class="card-front">
               <img class="imagen-cartaA" src="${personaje.imageUrl}" alt="${personaje.fullName}" itemprop="image">

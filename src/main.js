@@ -1,6 +1,6 @@
 import data from './data/got/got.js';
 import { renderItems } from './view.js';
-import { sortFamilia, filterBy, mostrarPagina } from './dataFunctions.js';
+import { sortFamilia, filterBy, mostrarPagina, getAgeAverage } from './dataFunctions.js';
 
 const listaPersonajes = data.got; 
 let clonData = [...listaPersonajes]
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   botonPersonajes.addEventListener('click', function() {
     mostrarPagina('pagina2');
+    getAgeAverage()
   });
 
   resetButton.addEventListener('click', function() {

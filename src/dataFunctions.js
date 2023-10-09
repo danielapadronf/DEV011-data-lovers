@@ -1,4 +1,5 @@
 import data from './data/got/got.js';
+const root = document.getElementById('root')
 
 export const mostrarPagina = (pagina) => {
   const paginas = document.querySelectorAll('.pagina');
@@ -30,16 +31,24 @@ export const filterBy = ((data, filterBy, value) =>{
   return arrayFamily
 });
 
-const getAgeAverage = () => {
-  const allTheBornDate = data.got.reduce((prev, current) => (
-    prev + current && current?.born?.replace(/[^0-9]/g, '') || 0
-  ), 0)
+export const getAgeAverage = () => {
+  const allTheBornDate = data.got.reduce((prev, current) => {
+    const bornString = current?.born || '0'; // Si es null o undefined, se convierte en '0'
+    const bornNumber = parseInt(bornString.replace(/[^0-9]/g, ''), 10);
+    return prev + bornNumber;
+  }, 0);  
 
   const totalOfCharts = data.got.length
 
   const average = allTheBornDate / totalOfCharts
 
-  console.log("el average es: ", average, "del total de personas: ", average)
-}
+  const averageRounded = average.toFixed(2); // Limitar a dos decimales
+
+  const averageTag = document.createElement("p") 
+  averageTag.textContent = `el año promedio es: ${averageRounded}, del total de personas: ${totalOfCharts}`
+
+  root.appendChild(averageTag)
+  return root 
+} 
 
 getAgeAverage()

@@ -116,8 +116,8 @@ p {
     height: 100%;
 }
 .contenedor-barra-principal{
-    display: inline-flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: column;
     flex-wrap:wrap;
     justify-content:center;
     align-items: center;
@@ -127,6 +127,12 @@ p {
 }
 #pagina2{
 margin-top: -5px;
+}
+
+.filters{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 .card {
     background-color: transparent;
@@ -202,4 +208,52 @@ margin-top: -5px;
 label{
     color: white;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 480px){
+    h1 > img {
+        width: 100%;
+    }
+
+    main{
+        padding: 0;
+    }
+
+    h2, h3{
+        position: relative;
+    }
+    .barra-navegacion{
+        z-index: 200;
+        flex-direction: row;
+        width: 100%;
+        height: 10%;
+        background: rgb(31,29,29)
+    }
+
+    .boton-inicio, .botonPersonajes{
+        padding: 0;
+        margin: 0;
+    }
+
+    footer{
+        position: relative;
+    }
+
+    .contenedor-barra-principal{
+        gap: 5rem;
+    }
+
+    .filters{
+        flex-direction: column;
+    }
+
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    
+
 }

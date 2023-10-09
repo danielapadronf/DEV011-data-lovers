@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Juego de Tronos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -28,6 +28,7 @@
   <!-- Contenido de la página 2 -->
     <div id="pagina2" class="pagina">
       <div class="contenedor-barra-principal">
+        <div class="filters">
       <label for="select-filter">Filtrar Casa:</label>
         <select id="select-filter" data-testid="select-filter" name="family">
           <option value="House Stark">Stark</option>
@@ -65,6 +66,7 @@
   <button class="button-clear" type="button" data-testid="button-clear">Limpiar</button>
 </form>
       </form>
+    </div>
       <section id="root"></section>
     </div>
   <script type="module" src="view.js"></script>
