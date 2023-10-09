@@ -41,7 +41,7 @@ Se procedió a establecer las principales historias de usuario del proyecto las 
 
 1.Creación de la página y definicón de estilos: Se penso en la necesidad de tener una página con las características mencionadas anteriormente, comentamos sugerencias de funcionalidad y datos que se creyeran útil.
 
-![imagen de alta fidelidad](https://ejemplo.com/imagen.jpg)
+![imagen de alta fidelidad](C:\Users\jeexi\Desktop\imagenes_README\Página.png)
 
 Luego de esto se comenzó a dar estructura al proyecto a través del archivo HTML y estilos a través del archivo CSS. Nuestras compa;era nos sugirieron y dieron feedback sobre cambiar el texto en la pagina de inicio
 
