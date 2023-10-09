@@ -39,11 +39,15 @@ Se utilizó la plataformar Trello para Planificar la realización del trabajo, p
 Historias de Usuario
 Se procedió a establecer las principales historias de usuario del proyecto las cuales fueron:
 
-Creación de la página y definicón de estilos: Se penso en la necesidad de tener una página con las características mencionadas anteriormente, comentamos sugerencias de funcionalidad y datos que se creyeran útil.
+1.Creación de la página y definicón de estilos: Se penso en la necesidad de tener una página con las características mencionadas anteriormente, comentamos sugerencias de funcionalidad y datos que se creyeran útil.
+
+![imagen de alta fidelidad](https://ejemplo.com/imagen.jpg)
 
 Luego de esto se comenzó a dar estructura al proyecto a través del archivo HTML y estilos a través del archivo CSS. Nuestras compa;era nos sugirieron y dieron feedback sobre cambiar el texto en la pagina de inicio
 
-Despliegue de todos los personajes
+![imagen de alta fidelidad](https://ejemplo.com/imagen.jpg)
+
+2. Despliegue de todos los personajes
 Se generó un menú en que se despliegue el poster de cada uno de los personajes de game of thrones. Para hace más fácil la elección de los personajes a investigar, se decidió crear dos botón de búsqueda, uno para filtar los personajes por cada uno de los apellidos  y un botón para ordenar la data en orden alfabético.
 
 
