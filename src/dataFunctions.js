@@ -1,4 +1,5 @@
 import data from './data/got/got.js';
+import { renderItems } from './view.js';
 const root = document.getElementById('root')
 
 export const mostrarPagina = (pagina) => {
@@ -33,7 +34,7 @@ export const filterBy = ((data, filterBy, value) =>{
 
 export const getAgeAverage = () => {
   const allTheBornDate = data.got.reduce((prev, current) => {
-    const bornString = current?.born || '0'; // Si es null o undefined, se convierte en '0'
+    const bornString = current&&current.born || '0'; // Si es null o undefined, se convierte en 0
     const bornNumber = parseInt(bornString.replace(/[^0-9]/g, ''), 10);
     return prev + bornNumber;
   }, 0);  
@@ -48,7 +49,7 @@ export const getAgeAverage = () => {
   averageTag.textContent = `el año promedio es: ${averageRounded}, del total de personas: ${totalOfCharts}`
 
   root.appendChild(averageTag)
-  return root 
-} 
+  return root
+}
 
 getAgeAverage()
