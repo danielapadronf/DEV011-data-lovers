@@ -1,11 +1,13 @@
 export const renderItems = (data) => {
   const ul = document.createElement('ul');
   ul.classList.add('contenedor');
-  data.forEach((personaje) => {
+  data.map((personaje) => {
     const li = document.createElement('li');
+    li.setAttribute('itemscope', 'carta');
+    li.setAttribute('itemtype', 'carta'); 
     li.classList.add("contenedor-con-degradado")
     li.innerHTML = `
-        <div class="card" itemType="http://schema.org/Person" itemprop="character">
+        <div class="card" itemprop="character">
           <div class="card-inner">
             <div class="card-front">
               <img class="imagen-cartaA" src="${personaje.imageUrl}" alt="${personaje.fullName}" itemprop="image">
