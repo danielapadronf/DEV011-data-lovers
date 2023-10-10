@@ -2,7 +2,7 @@
 
 ## Índice
 
-*  [1. Preámbulo](#2-Preámbulo)
+* [1. Preámbulo](#1-Preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Metodologia del trabjo](#3-Metodologia-del-trabjo)
 * [4. Actualizacion ](#4-Actualizacion)
