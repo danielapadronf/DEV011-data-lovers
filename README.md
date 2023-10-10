@@ -54,6 +54,6 @@ Se generó un menú en que se despliegue el poster de cada uno de los personajes
 ![imagen de alta fidelidad](https://raw.githubusercontent.com/danielapadronf/DEV011-data-lovers/esqueleto-html/src/Img/imagen3.jpeg)
 
 
-##4. Actualizacion 
+#4. Actualizacion 
 La idea del proyecto fue generar una página dinámica que pueda seguir mejorando su funcionalidad e interfaz con el paso del tiempo, es por esto que ahora que se tiene el prototipo básico funcionando, se espera seguir actualizando la página para completar la implementación asociada al prototipo de alta fidelidad y seguir maquetando mejoras asociadas a la necesidad de los usuarios que estén utilizando el servicio. Por el momento queda pendiente la ventana 
 
