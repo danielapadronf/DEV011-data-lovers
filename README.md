@@ -43,14 +43,16 @@ Se procedió a establecer las principales historias de usuario del proyecto las 
 
 Luego de esto se comenzó a dar estructura al proyecto a través del archivo HTML y estilos a través del archivo CSS. Nuestras compa;era nos sugirieron y dieron feedback sobre cambiar el texto en la pagina de inicio
 
+![imagen de alta fidelidad](https://raw.githubusercontent.com/danielapadronf/DEV011-data-lovers/esqueleto-html/src/Img/imagen1.jpeg)
 
-![imagen de alta fidelidad](Imagen de WhatsApp 2023-10-01 a las 15.31.53_dfca9935.pdf)
 
 2.Despliegue de todos los personajes
 Se generó un menú en que se despliegue el poster de cada uno de los personajes de game of thrones. Para hace más fácil la elección de los personajes a investigar, se decidió crear dos botón de búsqueda, uno para filtar los personajes por cada uno de los apellidos  y un botón para ordenar la data en orden alfabético.
+
+![imagen de alta fidelidad](https://raw.githubusercontent.com/danielapadronf/DEV011-data-lovers/esqueleto-html/src/Img/imagen2.jpeg)
 
 
 #4. Actualizacion 
 La idea del proyecto fue generar una página dinámica que pueda seguir mejorando su funcionalidad e interfaz con el paso del tiempo, es por esto que ahora que se tiene el prototipo básico funcionando, se espera seguir actualizando la página para completar la implementación asociada al prototipo de alta fidelidad y seguir maquetando mejoras asociadas a la necesidad de los usuarios que estén utilizando el servicio. Por el momento queda pendiente la ventana 
 
-![imagen de alta fidelidad](https://ejemplo.com/imagen.jpg)
+![imagen de alta fidelidad](https://raw.githubusercontent.com/danielapadronf/DEV011-data-lovers/esqueleto-html/src/Img/imagen1.jpeg)
