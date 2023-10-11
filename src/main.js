@@ -8,14 +8,13 @@ const contenedorPersonajes = document.getElementById('root');
 const botonInicio = document.querySelector('.boton-inicio');
 const botonPersonajes = document.querySelector('.botonPersonajes'); 
 const sort = document.getElementById("sort-order");
-const selectFilter = document.querySelector("#select-filter");//cambios
+const selectFilter = document.querySelector("#select-filter");
 const resetButton = document.querySelector(".button-clear");
 
 
 const ul = renderItems(listaPersonajes);
 
 contenedorPersonajes.appendChild(renderItems(listaPersonajes));
-
 document.addEventListener('DOMContentLoaded', function() {
 
   // Agrega event listeners para cada botón

@@ -1,6 +1,6 @@
 import data from './data/got/got.js';
-import { renderItems } from './view.js';
-const root = document.getElementById('root')
+// import { renderItems } from './view.js';
+// const root = document.getElementById('root')
 
 export const mostrarPagina = (pagina) => {
   const paginas = document.querySelectorAll('.pagina');
@@ -45,11 +45,11 @@ export const getAgeAverage = () => {
 
   const averageRounded = average.toFixed(2); // Limitar a dos decimales
 
-  const averageTag = document.createElement("p") 
-  averageTag.textContent = `el año promedio es: ${averageRounded}, del total de personas: ${totalOfCharts}`
+  const averageTag = document.createElement("p");
+  averageTag.textContent =  `Año promedio de nacimiento DC : ${averageRounded}, del total de personajes: ${totalOfCharts}`
+  averageTag.classList.add("average");
+  root.appendChild(averageTag);
 
-  root.appendChild(averageTag)
-  return root
 }
 
-getAgeAverage()
+getAgeAverage(root)
