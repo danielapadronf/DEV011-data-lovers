@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Juego de Tronos</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego de Tronos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/src/Img/Targaryen.ico">
+</head>
 <body>
     <header>
-      <div>
-        <h1>Game of Thrones</h1>
-        <H2>Bienvenidos a Juego de Tronos</H2>
-        <P>Este sitio esta dedicado a las personas que quieren conocer y dar una introducción perfecta al fascinante mundo de esta épica serie de televisión. Diseñada especialmente para aquellos que aún no han tenido la oportunidad de ver la saga, ofrece una visión general acerca de los personajes.</P>
-        <P>Está diseñada para ser una guía amigable y sin spoilers para aquellos que están considerando embarcarse en la emocionante travesía de Game of Thrones. Con detalles generales de los personajes, esta página proporciona una entrada suave para los nuevos espectadores. </P>
-        <P>¡Prepárate para sumergirte en una de las sagas más apasionantes de la televisión!</P>
-        <P> “Una reina que no confía en nadie es tan tonta como una reina que confía en todo el mundo”. (Daenerys Targaryen)</P>
+      <h1>
+        <img src="./Img/Letras-doradas.png" alt="letras doradas game of thrones"/>
+      </h1>
+      <div class="contenedor-barra-principal">
+        <nav class="barra-navegacion">
+          <button class="boton-inicio">Inicio</button>
+          <button class="botonPersonajes">Personajes</button>
+        </nav>
       </div>
     </header>
-
-    
-      <a href="/src/personajes.html" id="personajes"> Personajes</a>
-
-<div id="root"> </div>
-      <section id="contact">
-        <!-- Contenido de la sección de contacto -->
-      </section>
-    
-
-    <footer>
-      <p>@DataLovers20</p>
-Jessica Clemente y Daniela Padron
-    </footer>
-
-      <!-- <script src="main.js" type="module"></script> -->
-  </body>
+  <!-- Contenido de la página 1 -->
+    <div id="pagina1" class="pagina pagina-activa">
+      <main>
+        <h2> “Una reina que no confía en nadie es tan tonta como una reina que confía en todo el mundo”.</h2>
+        <h3>(Daenerys Targaryen)</h3>
+      </main>
+      <footer>Jessica Clemente y Daniela Padron<br>@DataLovers</footer>
+      </div>   
+  <!-- Contenido de la página 2 -->
+    <div id="pagina2" class="pagina">
+      <div class="contenedor-barra-principal">
+        <div class="filters">
+      <label for="select-filter">Filtrar Casa:</label>
+        <select id="select-filter" data-testid="select-filter" name="family">
+          <option value="House Stark">Stark</option>
+          <option value="Worm">Worm</option>
+          <option value="House Tyrell">Tyrell</option>
+          <option value="Qyburn">Qyburn</option>
+          <option value="House Targaryen">Targaryen</option>
+          <option value="House Tarly">Tarly</option>
+          <option value="House Baratheon">Baratheon</option>
+          <option value="House Lannister">Lannister</option>
+          <option value="House Greyjoy">Greyjoy</option>
+          <option value="House Clegane">Clegane</option>
+          <option value="House Baelish">Baelish</option>
+          <option value="House Seaworth">Seaworth</option>
+          <option value="Unkown">Unknown</option>
+          <option value="Free Folk">Free Folk</option>
+          <option value="Tarth">Tarth</option>
+          <option value="Naathi">Naathi</option>
+          <option value="None">None</option>
+          <option value="Bolton">Bolton</option>
+          <option value="Naharis">Naharis</option>
+          <option value="Mormont">Mormont</option>
+          <option value="Sparrow">Sparrow</option>
+          <option value="Viper">Viper</option>
+          <option value="Sand">Sand</option>
+          <option value="Greyjoy">Greyjoy</option>
+          <option value="Lorathi">Lorathi</option>  
+        </select>
+        <label for="sort-order">Ordenar:</label>
+  <select id="sort-order" data-testid="select-sort" name="abc">
+  <option value="asc">A-Z</option>
+  <option value="desc">Z-A</option>
+</select>
+<form action="">
+  <button class="button-clear" type="button" data-testid="button-clear">Limpiar</button>
+</form>
+    </div>
+    </div>
+    <section id="root"></section>
+    </div>
+  <script type="module" src="view.js"></script>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="dataFunctions.js"></script>
+</body>
 </html>

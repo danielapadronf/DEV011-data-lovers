@@ -1,17 +1,56 @@
 import data from './data/got/got.js';
+// import { renderItems } from './view.js';
+// const root = document.getElementById('root')
 
-const personajes = document.getElementById('personajes');
+export const mostrarPagina = (pagina) => {
+  const paginas = document.querySelectorAll('.pagina');
+  paginas.forEach(p => p.classList.remove('pagina-activa'));
+  
+  const paginaSeleccionada = document.getElementById(pagina);
+  paginaSeleccionada.classList.add('pagina-activa');
+}
+export const sortFamilia = (value) => {
+  const familia = data.got;
 
-export const cargarImagenes = () => {
-  console.log('La funcion se ejecuta')
-    const images = data.got.map((item) => {
-        const img = document.createElement('img'); 
-        img.src = item.imageUrl;
-        img.alt = item.fullName;
-        img.width = 100;
-        img.height = 100;
-        return img;
-    });
+  if (value === "desc") {
+    familia.sort((a, b) => b.family.localeCompare(a.family));
+  }
 
-    images.forEach((image) => personajes.appendChild(image));
-};
+  if (value === "asc") {
+    familia.sort((a, b) => a.family.localeCompare(b.family));
+  }
+
+  return familia; // Devuelve la lista ordenada
+}
+// Función para filtrar la lista de personajes
+export const filterBy = ((data, filterBy, value) =>{
+  const arrayFamily = data.filter(family => {
+    if (family [filterBy] === value){
+      return family;
+    }
+  })
+  return arrayFamily
+});
+
+export const getAgeAverage = () => {
+  const allTheBornDate = data.got.reduce((prev, current) => {
+    const bornString = current&&current.born || '0'; // Si es null o undefined, se convierte en 0
+    const bornNumber = parseInt(bornString.replace(/[^0-9]/g, ''), 10);
+    return prev + bornNumber;
+  }, 0);  
+
+  const totalOfCharts = data.got.length
+
+  const average = allTheBornDate / totalOfCharts
+
+  const averageRounded = average.toFixed(2); // Limitar a dos decimales
+
+  const averageTag = document.createElement("p");
+  averageTag.textContent =  `Año promedio de nacimiento DC : ${averageRounded}, del total de personajes: ${totalOfCharts}`
+  averageTag.classList.add("average");
+  root.appendChild(averageTag);
+
+}
+
+getAgeAverage(root)
+
