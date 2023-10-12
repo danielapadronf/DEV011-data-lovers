@@ -53,3 +53,4 @@ export const getAgeAverage = () => {
 }
 
 getAgeAverage(root)
+

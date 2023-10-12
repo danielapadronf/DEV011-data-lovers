@@ -170,6 +170,7 @@ margin-top: -5px;
     height: 100%;
     position: relative ;
     object-position: 50% 0;
+    object-fit: cover;
 }
 
 .card:hover .card-inner {
@@ -260,6 +261,5 @@ label{
         margin: 0;
         padding: 0;
     }
-    
 
 }
