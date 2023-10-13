@@ -7,17 +7,18 @@
     display: block;
 }
 body {
-    background: linear-gradient(rgba(5, 7, 12, 0.90), rgba(5, 7, 12, 0.90)),
-    url(Img/Img\ inicio.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.641), rgba(0, 0, 0, 0.658)), url('Img/ImgInicio.jpg');
     box-sizing: border-box;
-}  
+}
+
 main{
     padding-left: 9rem;
 }
+
 header{
     display: block;
-
 }
+
 h1{
     display: grid;
     place-items: center; 
